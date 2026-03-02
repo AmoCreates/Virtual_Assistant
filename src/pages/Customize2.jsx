@@ -1,6 +1,8 @@
 import React, { useContext, useState } from 'react'
 import { UserDataContext } from '../Context/UserContext.jsx'
+import { IoMdArrowRoundBack } from "react-icons/io";
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 const Customize2 = () => {
   const [loading, setloading] = useState(false)
@@ -44,12 +46,16 @@ const Customize2 = () => {
       <input  className='assistantName w-[350px] py-[8px] px-3 border-2 border-white rounded-full bg-transparent' type="text" placeholder='Alita' name='assistantName' 
       onChange={(e) => {setAssistantName(e.target.value)}} value={assistantName}/>
         
-      <button className={`${!assistantName? 'hidden': 'visible'} ${loading ? 'cursor-not-allowed' : 'cursor-pointer'} disabled:opacity-50 select bg-white text-[22px] text-black rounded-full px-6 py-1 `}
-      disabled={loading} 
-      onClick={()=> {
-        handleUpdateAssistant()
-        setloading(true)
-        }}>{loading ? "Creating..." : "Finally create your assistant"}</button>
+      <div className='flex gap-2 flex-wrap'>
+        <Link to='/customize' className={`${loading ? 'cursor-not-allowed' : 'cursor-pointer'} disabled:opacity-50 select bg-white text-[22px] text-black rounded-full p-2.5`}
+        ><IoMdArrowRoundBack /></Link>
+        <button className={`${!assistantName? 'hidden': 'visible'} ${loading ? 'cursor-not-allowed' : 'cursor-pointer'} disabled:opacity-50 select bg-white text-[22px] text-black rounded-full px-6 py-1 `}
+        disabled={loading} 
+        onClick={()=> {
+          handleUpdateAssistant()
+          setloading(true)
+          }}>{loading ? "Creating..." : "Finally create your assistant"}</button>
+      </div>
     </div>
   )
 }
