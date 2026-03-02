@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+*{
+    outline:none;
+}
+
+input {
+    color:white;
+}
+
+::placeholder {
+    color:white;
+}
+
+.login_form {
+    background:url(./assets/VA_Jarvis.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.form_container {
+    backdrop-filter: blur(10px);
+    padding: 60px 8px;
+    border-radius: 12px;
+    box-shadow: 1px 1px 15px rgb(50, 72, 121);
+}
+
+.form_container button:active {
+    transform: scale(0.9);
+}
+
+.card {
+    box-shadow: 0px 0px 1px 1px rgba(255, 255, 255, 0.192);
+}
+
+.card:hover {
+    box-shadow: 0px 0px 15px white;
+    border:2px solid white;
+}
+
+.selected {
+    box-shadow: 0px 0px 15px white;
+    border:2px solid white;
+}
+
+.select:hover {
+    box-shadow: 0px 0px 15px white;
+}
+
+.assistantName::placeholder {
+    color:gray;
+}
+
+/* @media (max-width: 600px) {
+    form h1 {
+        font-size: 30px;
+    }
+} */
