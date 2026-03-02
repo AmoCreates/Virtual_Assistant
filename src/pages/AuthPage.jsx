@@ -27,9 +27,6 @@ const AuthPage = () => {
         }
     }
 
-    
-
-
   return (
     <div className='login_form text-white font-semibold h-screen w-screen flex justify-end p-24 items-center'>
       <form onSubmit={handleSignup} className='form_container flex flex-col items-center gap-4'>

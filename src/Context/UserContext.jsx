@@ -7,6 +7,7 @@ export const UserDataContext = createContext();
 const UserContext = ({children}) => {
   const [userData, setUserData] = useState();
   const [backendImg, setBackendImg] = useState();
+  const [frontendImg, setFrontendImg] = useState();
   const [selectedImg, setSelectedImg] = useState();
   
 
@@ -33,6 +34,7 @@ const UserContext = ({children}) => {
     userData, setUserData,
     selectedImg, setSelectedImg,
     backendImg, setBackendImg,
+    frontendImg, setFrontendImg,
   };
 
   return (
